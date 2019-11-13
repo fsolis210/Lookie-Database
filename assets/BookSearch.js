@@ -1,4 +1,6 @@
 var APIkey = "NxD7nHwkbdOwWiA4LU52MQ";
+var title = "";
+var author = "";
 
 function displayBooks(search) {
   var queryURL =
@@ -6,7 +8,6 @@ function displayBooks(search) {
     APIkey +
     "&q=" +
     search;
-
 
   $.ajax({
     url: queryURL,
@@ -17,6 +18,20 @@ function displayBooks(search) {
       $(xml)
         .find("work")
         .each(function() {
+          title = $(this)
+            .find("title")
+            .text();
+          title = encodeURIComponent(title).replace(/%20/g, "+");
+          author = $(this)
+            .find("author").find("name")
+            .text();
+          author = encodeURIComponent(author).replace(/%20/g, "+");
+          var amazonLink =
+            "https://www.amazon.com/s?k=" +
+            title + " " + author +
+            "&i=stripbooks&ref=nb_sb_noss_2";
+
+          console.log(amazonLink);
           // Append new data to the DIV element.
           $("#showBookResults").append(
             "<div class='p-3'>" +
@@ -27,7 +42,7 @@ function displayBooks(search) {
               "</div> " +
               "<div><b>Author: </b>" +
               $(this)
-                .find("author")
+                .find("author").find("name")
                 .text() +
               "</div> " +
               "<div><b>Cover Image: </b><br>" +
@@ -37,6 +52,9 @@ function displayBooks(search) {
                 .text() +
               "' >" +
               "</div>" +
+              "<a target='_blank' href=" +
+              amazonLink +
+              'class="btn btn-warning">Amazon Search</a>' +
               "</div>"
           );
         });
@@ -51,5 +69,4 @@ $("#find-book").on("click", function(event) {
   var search = $("#searchInput").val();
 
   displayBooks(search);
-  
 });
