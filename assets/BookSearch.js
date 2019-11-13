@@ -2,6 +2,7 @@ var APIkey = "NxD7nHwkbdOwWiA4LU52MQ";
 var title = "";
 var author = "";
 
+//ajax book search
 function displayBooks(search) {
   var queryURL =
     "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/search/index.xml?key=" +
@@ -30,6 +31,7 @@ function displayBooks(search) {
             "https://www.amazon.com/s?k=" +
             title + " " + author +
             "&i=stripbooks&ref=nb_sb_noss_2";
+            amazon = encodeURIComponent(amazon).replace(/%20/g, "+");
 
           console.log(amazonLink);
           // Append new data to the DIV element.
