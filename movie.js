@@ -1,7 +1,6 @@
-var movie = "Joker"
+var movie = $("#searchBar").val();
 function displayMovie(){
     var queryUrl = "https://www.omdbapi.com/?t=" + movie + "&apikey=7127e834";
-    // $(this).attr("data-name");
 
     $.ajax({
         url: queryUrl,
