@@ -68,7 +68,7 @@ $("#find-book").on("click", function(event) {
   event.preventDefault();
   $("#showBookResults").empty();
 
-  var search = $("#searchInput").val();
+  var search = $("#searchBar").val();
 
   displayBooks(search);
 });
