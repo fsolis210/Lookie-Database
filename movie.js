@@ -11,12 +11,13 @@ function displayMovie(movie){
         url: queryUrl,
         method: "GET"
       }).then(function(response) {
+        $("#movieCardPoster").attr("src",response.Poster);
         var movieDiv = $("<div class='movie'>");
         var title = response.Title;
-        var hOne = $("<h>").text("Title: " + title);
+        var hOne = $("<h1>").text("Title: " + title);
         movieDiv.append(hOne);
         var rated = response.Rated;
-        var pOne = $("<p>").text("Rated: " + rated);
+        var pOne = $("<h3>").text("Rated: " + rated);
         movieDiv.append(pOne);
         var plot = response.Plot;
         var pTwo = $("<p>").text("Plot: " + plot);
@@ -24,12 +25,7 @@ function displayMovie(movie){
         var mPoster = response.poster;
         var poster = $("<img>").text("Poster: " + mPoster);
         movieDiv.append(poster);
-        console.log(movieDiv);
         $("#movieCard").html(movieDiv);
-        console.log(title);
-        console.log(rated);
-        console.log(plot);
-        console.log(mPoster);
       });   
 }
 
@@ -38,7 +34,6 @@ $("#searchButton").on("click", function(event) {
 
   movie = $("#searchBar").val();
   localStorage.setItem("movie", movie);
-  console.log(movie);
 
   window.location.href = "results.html";
 });
