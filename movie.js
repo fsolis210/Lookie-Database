@@ -1,6 +1,11 @@
-var movie = $("#searchBar").val();
-function displayMovie(){
+
+var movie = "";
+
+//Mat added an argument for the function
+function displayMovie(movie){
+
     var queryUrl = "https://www.omdbapi.com/?t=" + movie + "&apikey=7127e834";
+    console.log(queryUrl);
 
     $.ajax({
         url: queryUrl,
@@ -19,10 +24,23 @@ function displayMovie(){
         var mPoster = response.poster;
         var poster = $("<img>").text("Poster: " + mPoster);
         movieDiv.append(poster);
+        console.log(movieDiv);
+        $("#movieCard").html(movieDiv);
         console.log(title);
         console.log(rated);
         console.log(plot);
         console.log(mPoster);
       });   
 }
-displayMovie();
+
+$("#searchButton").on("click", function(event) {
+  event.preventDefault();
+
+  movie = $("#searchBar").val();
+  localStorage.setItem("movie", movie);
+  console.log(movie);
+
+  window.location.href = "results.html";
+});
+
+

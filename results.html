@@ -10,16 +10,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/results.css">
     <!-- Animate.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!--Get JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+​
 
     <title>Lookie Search Results</title>
 </head>
-<body>
+<body onload="resultPageLoad()">
 
     <!-- Top nav bar with search on the right side with animation.css -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand"></a>
           <form class="form-inline animated shake">
-            <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+            <input id="searchBar" class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
             <button class="btn btn-outline-crimson my-2 my-sm-0" type="submit">Search</button>
           </form>
     </nav>
@@ -46,6 +49,13 @@
         (front: movie cover)
         (back: movie info and if possible click command for book movie is based on)
         -->
+
+        <div class="card mb-3">
+            <img id="movieCardPoster" class="card-img-top" src="" alt="Card image cap">
+            <div id="movieCard" class="card-body">
+              
+            </div>
+          </div>
 
         <!-- row 1 -->
         <div class="row">
@@ -469,4 +479,7 @@
 
         
 </body>
+
+<script src="movie.js"></script>
+<script src="assets/javascript/BookSearch.js"></script>
 </html>

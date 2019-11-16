@@ -1,6 +1,7 @@
 var APIkey = "NxD7nHwkbdOwWiA4LU52MQ";
 var title = "";
 var author = "";
+var cardCount = 0;
 
 //ajax book search
 function displayBooks(search) {
@@ -9,6 +10,8 @@ function displayBooks(search) {
     APIkey +
     "&q=" +
     search;
+
+    console.log(queryURL);
 
   $.ajax({
     url: queryURL,
@@ -31,11 +34,11 @@ function displayBooks(search) {
             "https://www.amazon.com/s?k=" +
             title + " " + author +
             "&i=stripbooks&ref=nb_sb_noss_2";
-            amazon = encodeURIComponent(amazon).replace(/%20/g, "+");
+            amazonLink = encodeURIComponent(amazonLink).replace(/%20/g, "+");
 
           console.log(amazonLink);
           // Append new data to the DIV element.
-          $("#showBookResults").append(
+          $("#card" + cardCount).append(
             "<div class='p-3'>" +
               "<div><b>Name of Book: </b>" +
               $(this)
@@ -59,16 +62,22 @@ function displayBooks(search) {
               'class="btn btn-warning">Amazon Search</a>' +
               "</div>"
           );
+          cardCount++;
         });
     }
   });
 }
 
-$("#find-book").on("click", function(event) {
-  event.preventDefault();
-  $("#showBookResults").empty();
 
-  var search = $("#searchBar").val();
 
-  displayBooks(search);
-});
+function advancedDisplayBooks(movie){
+  cardCount = 0;
+  displayBooks(movie);
+}
+
+function resultPageLoad() {
+  movie = localStorage.getItem("movie");
+  displayMovie(movie);
+  advancedDisplayBooks(movie);
+  
+}
