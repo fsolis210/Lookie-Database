@@ -11,14 +11,11 @@ function displayBooks(search) {
     "&q=" +
     search;
 
-    console.log(queryURL);
-
   $.ajax({
     url: queryURL,
     method: "GET",
     dataType: "xml",
     success: function(xml) {
-      console.log(xml);
       $(xml)
         .find("work")
         .each(function() {
@@ -35,7 +32,6 @@ function displayBooks(search) {
             title + "+" + author +
             "&i=stripbooks&ref=nb_sb_noss_2";
 
-          console.log(amazonLink);
           // Append new data to the DIV element.
           $("#front"+cardCount).html(
             "<img src='" + $(this).find("image_url").text() + "' height='300' width='192'>"
