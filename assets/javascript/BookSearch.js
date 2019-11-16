@@ -32,12 +32,14 @@ function displayBooks(search) {
           author = encodeURIComponent(author).replace(/%20/g, "+");
           var amazonLink =
             "https://www.amazon.com/s?k=" +
-            title + " " + author +
+            title + "+" + author +
             "&i=stripbooks&ref=nb_sb_noss_2";
-            amazonLink = encodeURIComponent(amazonLink).replace(/%20/g, "+");
 
           console.log(amazonLink);
           // Append new data to the DIV element.
+          $("#front"+cardCount).html(
+            "<img src='" + $(this).find("image_url").text() + "' height='300' width='192'>"
+          )
           $("#card" + cardCount).append(
             "<div class='p-3'>" +
               "<div><b>Name of Book: </b>" +
@@ -50,13 +52,6 @@ function displayBooks(search) {
                 .find("author").find("name")
                 .text() +
               "</div> " +
-              "<div><b>Cover Image: </b><br>" +
-              "<img src='" +
-              $(this)
-                .find("image_url")
-                .text() +
-              "' >" +
-              "</div>" +
               "<a target='_blank' href=" +
               amazonLink +
               'class="btn btn-warning">Amazon Search</a>' +
