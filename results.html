@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Attached CSS file -->
+    <link rel="stylesheet" type="text/css" href="assets/css/results.css">
+    <!-- Animate.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!--Get JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+​
+
+    <title>Lookie Search Results</title>
+</head>
+<body onload="resultPageLoad()">
+
+    <!-- Top nav bar with search on the right side with animation.css -->
+    
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- logo header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="./assets/images/book-header-1.png" alt="Book Header" width="361" height="100">
+                <img src="./assets/images/homepage-logo.png" alt="Lookie Logo" width="350" height="100">
+                <img src="./assets/images/book-header-2.png" alt="Book Header" width="361" height="100">
+            </div>
+        </div>
+        <br>
+        
+        <!--
+        [rows and columns]
+        ––––––––––––––––––
+        •5 rows with 5 columns each
+        •Columns hold flipcards 
+        •Flip card: 
+        (front: movie cover)
+        (back: movie info and if possible click command for book movie is based on)
+        -->
+        
+        <div class="card mb-3 overflow-hidden" >
+                <div id="movieCard" class="card-body">
+              
+                    </div>
+            <img class="card-img-top" src="" alt="Card image cap" id="movieCardPoster">
+            
+          </div>
+
+          
+          <div class="jumbotron jumbotron-fluid text-center">
+                <div class="container">
+                  <h1 class="display-4">Lookie Here, Books!</h1>
+                  <p class="lead">Here is a list of 20 books related to the title, and amazon links to boot!</p>
+                </div>
+              </div>
+
+        <!-- row 1 -->
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front" id="front0">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card0">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 2 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front" id="front1">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card1">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 3 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front2">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card2">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 4 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front3">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card3">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 5 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front4">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card4">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- row 2 -->
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front5">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card5">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 2 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front" id="front6">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card6">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 3 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front7">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card7">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 4 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front8">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card8">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 5 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front9">
+                        
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card9">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- row 3 -->
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front10">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card10">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 2 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front11">
+                        
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card11">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 3 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front12">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card12">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 4 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner"id="front13">
+                        <!-- flip card front -->
+                        <div class="flip-card-front">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card13">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 5 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front14">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card14">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- row 4 -->
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front15">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card15">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 2 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front16">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card16">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 3 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front17">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card17">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 4 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front18">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card18">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- column 5 -->
+            <div class="col-md-2.4">
+                <div class="col-md-12">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- flip card front -->
+                        <div class="flip-card-front"id="front19">
+                            
+                        </div>
+                        <!-- flip card back -->
+                        <div class="flip-card-back">
+                            <div id="card19">
+                            <!-- back of card infomation goes here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+
+
+        <!-- pagnotaion -->
+       
+
+    </div>
+
+
+        
+</body>
+
+<script src="movie.js"></script>
+<script src="assets/javascript/BookSearch.js"></script>
+</html>
